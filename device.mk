@@ -13,12 +13,10 @@
 # limitations under the License.
 
 PRODUCT_COPY_FILES := \
-    device/linaro/smdkv310/vold.fstab:system/etc/vold.fstab \
-    device/linaro/smdkv310/egl.cfg:system/lib/egl/egl.cfg
+    device/linaro/origen/vold.fstab:system/etc/vold.fstab \
+    device/linaro/origen/egl.cfg:system/lib/egl/egl.cfg
 
 PRODUCT_COPY_FILES += \
-        device/linaro/smdkv310/init.omap4430.rc:root/init.omap4430.rc \
-        device/linaro/smdkv310/ueventd.omap4430.rc:root/ueventd.omap4430.rc
+        device/linaro/origen/init.origen.rc:root/init.origen.rc \
+        device/linaro/origen/ueventd.origen.rc:root/ueventd.origen.rc
 
-#PRODUCT_COPY_FILES += \
-#        device/ti/proprietary-open/graphics/omap4/license.txt:root/license.txt

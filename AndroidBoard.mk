@@ -25,14 +25,14 @@ ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/../common/init.rc | $(ACP)
 	$(transform-prebuilt-to-target)
 
-file := $(TARGET_ROOT_OUT)/init.omap4430.rc
+file := $(TARGET_ROOT_OUT)/init.origen.rc
 ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/init.omap4430.rc | $(ACP)
+$(file) : $(LOCAL_PATH)/init.origen.rc | $(ACP)
 	$(transform-prebuilt-to-target)
 
-file := $(PRODUCT_OUT)/system/etc/init.omap4.sh
+file := $(PRODUCT_OUT)/system/etc/init.origen.sh
 ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/init.omap4.sh | $(ACP)
+$(file) : $(LOCAL_PATH)/init.origen.sh | $(ACP)
 	$(transform-prebuilt-to-target)
 
 file := $(TARGET_ROOT_OUT)/initlogo.rle

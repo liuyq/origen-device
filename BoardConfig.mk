@@ -3,14 +3,14 @@
 # Product-specific compile-time definitions.
 #
 
-TARGET_BOARD_PLATFORM := smdkv310
+TARGET_BOARD_PLATFORM := origen
 TARGET_NO_BOOTLOADER := true # Uses u-boot instead 
 TARGET_NO_KERNEL := false
-KERNEL_CONFIG := smdkv310_android_defconfig
+KERNEL_CONFIG := origen_android_defconfig
 TARGET_USE_UBOOT := true
-UBOOT_CONFIG := smdkv310_config
-TARGET_USE_XLOADER := false
-XLOADER_BINARY := out/target/product/smdkv310/obj/u-boot/mmc_spl/u-boot-mmc-spl.bin
+UBOOT_CONFIG := origen_config
+TARGET_USE_XLOADER := true
+XLOADER_BINARY := out/target/product/origen/obj/u-boot/mmc_spl/u-boot-mmc-spl.bin
 TARGET_NO_RECOVERY := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_PROVIDES_INIT_RC := true

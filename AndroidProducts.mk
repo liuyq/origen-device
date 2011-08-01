@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/smdkv310.mk
+	$(LOCAL_DIR)/origen.mk
