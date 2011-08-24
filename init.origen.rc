@@ -12,8 +12,9 @@ on init
     write /sys/kernel/debug/pm_debug/smartreflex/sr_mpu/autocomp 1
 
 on boot
-    setprop ro.build.product omap4sdp
-    setprop ro.product.device omap4sdp
+    setprop hw.nobattery true
+    setprop ro.build.product exynos4
+    setprop ro.product.device exynos4
 
     # create dhcpcd dir
     mkdir /data/misc/dhcp 0770 dhcp dhcp
@@ -50,41 +51,7 @@ on boot
     chown system system /dev/video1
     chown system system /dev/video2
     chown system system /dev/video3
-    # change permissions for overlay managers and display devices
-    chown system system /sys/devices/platform/omapdss/display0/enabled
-    chown system system /sys/devices/platform/omapdss/display1/enabled
-    chown system system /sys/devices/platform/omapdss/display2/enabled
-    chown system system /sys/devices/platform/omapdss/display3/enabled
-    chown system system /sys/devices/platform/omapdss/display0/name
-    chown system system /sys/devices/platform/omapdss/display1/name
-    chown system system /sys/devices/platform/omapdss/display2/name
-    chown system system /sys/devices/platform/omapdss/display3/name
-    chown system system /sys/devices/platform/omapdss/overlay0/manager
-    chown system system /sys/devices/platform/omapdss/overlay1/manager
-    chown system system /sys/devices/platform/omapdss/overlay2/manager
-    chown system system /sys/devices/platform/omapdss/overlay3/manager
-    chown system system /sys/devices/platform/omapdss/overlay0/zorder
-    chown system system /sys/devices/platform/omapdss/overlay1/zorder
-    chown system system /sys/devices/platform/omapdss/overlay2/zorder
-    chown system system /sys/devices/platform/omapdss/overlay3/zorder
-    # change permissions for manager tranparency parameters
-    chown system system /sys/devices/platform/omapdss/manager0/name
-    chown system system /sys/devices/platform/omapdss/manager0/display
-    chown system system /sys/devices/platform/omapdss/manager1/name
-    chown system system /sys/devices/platform/omapdss/manager1/display
-    chown system system /sys/devices/platform/omapdss/manager2/name
-    chown system system /sys/devices/platform/omapdss/manager2/display
-    chown system system /sys/devices/platform/omapdss/overlay0/enabled
-    chown system system /sys/devices/platform/omapdss/overlay1/enabled
-    chown system system /sys/devices/platform/omapdss/overlay2/enabled
-    chown system system /sys/devices/platform/omapdss/overlay3/enabled
-    # change permissions for display timings to get the resolutions
-    chown system system /sys/devices/platform/omapdss/display0/timings
-    chown system system /sys/devices/platform/omapdss/display1/timings
-    chown system system /sys/devices/platform/omapdss/display2/timings
-    chown system system /sys/devices/platform/omapdss/display3/timings
-    chown system system /sys/devices/platform/omapdss/display2/code
-     # change permissions for Tiler driver
+    # change permissions for Tiler driver
     chown media media /dev/tiler
     chmod 0660 /dev/tiler
     chmod 0660 /dev/dmm

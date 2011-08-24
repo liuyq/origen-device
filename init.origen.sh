@@ -1,3 +1,3 @@
 #!/system/bin/sh
 
-setprop ro.runtime.device pandaboard
+setprop ro.runtime.device origenboard

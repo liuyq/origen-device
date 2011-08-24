@@ -6,7 +6,7 @@
 TARGET_BOARD_PLATFORM := origen
 TARGET_NO_BOOTLOADER := true # Uses u-boot instead 
 TARGET_NO_KERNEL := false
-KERNEL_CONFIG := origen_android_defconfig
+KERNEL_CONFIG := android_origen_defconfig
 TARGET_USE_UBOOT := true
 UBOOT_CONFIG := origen_config
 TARGET_USE_XLOADER := false
@@ -14,9 +14,9 @@ XLOADER_BINARY := out/target/product/origen/obj/u-boot/mmc_spl/u-boot-mmc-spl.bi
 TARGET_NO_RECOVERY := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_PROVIDES_INIT_RC := true
-BOARD_USES_GENERIC_AUDIO := true
-BOARD_USES_ALSA_AUDIO := false
-OMAP_ENHANCEMENT := true
+BOARD_USES_GENERIC_AUDIO := false
+BOARD_USES_ALSA_AUDIO := true
+OMAP_ENHANCEMENT := false
 HARDWARE_OMX := false
 USE_CAMERA_STUB := true
 
@@ -50,5 +50,4 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
 # bootargs
-BOARD_KERNEL_CMDLINE := 
-
+BOARD_KERNEL_CMDLINE := console=ttySAC2 root=/dev/mmcblk0p2
