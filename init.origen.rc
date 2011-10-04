@@ -68,6 +68,28 @@ on boot
     chown system system /sys/class/graphics/fb1/overlays
     chmod 0666 /dev/pvrsrvkm
 
+    # Add for wifi
+    mkdir /data/misc/wifi
+    mkdir /data/misc/wifi/sockets
+    chmod 0770 /data/misc/wifi
+    chmod 0770 /data/misc/wifi/sockets
+    chmod 0660 /data/misc/wifi/wpa_supplicant.conf
+    chown wifi wifi /data/misc/wifi
+    chown wifi wifi /data/misc/wifi/sockets
+    chown wifi wifi /data/misc/wifi/wpa_supplicant.conf
+
+    # wpa_supplicant socket (unix socket mode)
+    mkdir /data/system
+    mkdir /data/system/wpa_supplicant
+    chmod 0775 /data/system
+    chmod 0771 /data/system/wpa_supplicant
+    chown system system /data/system
+    chown wifi wifi /data/system/wpa_supplicant
+
+    # insmod wifi module
+    insmod /system/modules/cfg80211.ko
+    # insmod /system/modules/ath6kl.ko
+
 # Initialize the SGX driver
 service pvrsrvinit /system/bin/pvrsrvinit
     user root
@@ -76,4 +98,14 @@ service pvrsrvinit /system/bin/pvrsrvinit
 service faketsd /system/bin/faketsd
     user bluetooth
     group bluetooth
+    oneshot
+
+service wpa_supplicant /system/bin/wpa_supplicant -Dwext -iwlan0 -c/data/misc/wifi/wpa_supplicant.conf -dd
+    group system wifi inet
+    disabled
+    oneshot
+
+service dhcpcd_wlan0 /system/bin/dhcpcd -d -B wlan0
+    group system dhcp
+    disabled
     oneshot
