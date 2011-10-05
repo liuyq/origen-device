@@ -43,5 +43,5 @@ $(file) : $(LOCAL_PATH)/initlogo.rle | $(ACP)
 file := $(PRODUCT_OUT)/system/etc/wifi/wpa_supplicant.conf
 ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/wpa_supplicant.conf | $(ACP)
-        $(transform-prebuilt-to-target)
+	$(transform-prebuilt-to-target)
 
