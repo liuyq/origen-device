@@ -61,3 +61,6 @@ BOARD_KERNEL_CMDLINE := console=ttySAC2 root=/dev/mmcblk0p2
 
 # Origen uses an Exynos4 -- Cortex A9
 TARGET_EXTRA_CFLAGS += -mtune=cortex-a9 -mcpu=cortex-a9
+
+# ARMs gator (DS-5)
+TARGET_USE_GATOR := true
