@@ -15,6 +15,7 @@ on boot
     setprop hw.nobattery true
     setprop ro.build.product exynos4
     setprop ro.product.device exynos4
+    setprop wifi.interface wlan0
 
     # create dhcpcd dir
     mkdir /data/misc/dhcp 0770 dhcp dhcp
