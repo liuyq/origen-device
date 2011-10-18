@@ -110,3 +110,12 @@ service dhcpcd_wlan0 /system/bin/dhcpcd -d -B wlan0
     group system dhcp
     disabled
     oneshot
+
+# For Samsung Origen Bluetooth Feature
+service bccmd /system/bin/bccmd -t bcsp -d /dev/ttySAC0 psload -r /system/etc/bluetooth/origen.psr
+    disable
+    oneshot
+
+service hciattach /system/bin/hciattach -s 921600 /dev/ttySAC0  bcsp 921600 flow
+    disable
+    oneshot
