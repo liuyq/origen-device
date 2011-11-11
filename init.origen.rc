@@ -91,6 +91,12 @@ on boot
     insmod /system/modules/cfg80211.ko
     # insmod /system/modules/ath6kl.ko
 
+    # Enable Android usb gadget functionality
+    ## adb for the time being
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/functions adb
+    write /sys/class/android_usb/android0/enable 1
+
 # Initialize the SGX driver
 service pvrsrvinit /system/bin/pvrsrvinit
     user root
