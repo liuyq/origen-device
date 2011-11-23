@@ -13,10 +13,27 @@
 # limitations under the License.
 
 PRODUCT_COPY_FILES := \
-    device/linaro/origen/vold.fstab:system/etc/vold.fstab \
-    device/linaro/origen/egl.cfg:system/lib/egl/egl.cfg
+	device/linaro/origen/vold.fstab:system/etc/vold.fstab \
+	device/linaro/origen/egl.cfg:system/lib/egl/egl.cfg
 
 PRODUCT_COPY_FILES += \
+        device/linaro/origen/init.rc:root/init.rc \
         device/linaro/origen/init.origen.rc:root/init.origen.rc \
-        device/linaro/origen/ueventd.origen.rc:root/ueventd.origen.rc
+        device/linaro/origen/ueventd.origen.rc:root/ueventd.origen.rc \
+        device/linaro/origen/initlogo.rle:root/initlogo.rle \
+        device/linaro/origen/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
+PRODUCT_PROPERTY_OVERRIDES := \
+        hwui.render_dirty_regions=false
+
+PRODUCT_CHARACTERISTICS := tablet,nosdcard
+
+PRODUCT_TAGS += dalvik.gc.type-precise
+
+PRODUCT_PACKAGES += \
+        librs_jni \
+        com.android.future.usb.accessory
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+        make_ext4fs
