@@ -118,7 +118,7 @@ service dhcpcd_wlan0 /system/bin/dhcpcd -d -B wlan0
     oneshot
 
 # For Samsung Origen Bluetooth Feature
-service bccmd /system/bin/bccmd -t bcsp -d /dev/ttySAC0 psload -r /system/etc/bluetooth/origen.psr
+service bccmd /system/bin/bccmd -t bcsp -d /dev/ttySAC0 psload -r /system/etc/firmware/bluetooth/origen.psr
     disabled
     oneshot
 
