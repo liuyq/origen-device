@@ -39,3 +39,6 @@ PRODUCT_PACKAGES += \
 # Filesystem management tools
 PRODUCT_PACKAGES += \
         make_ext4fs
+
+$(call inherit-product-if-exists, vendor/samsung/origen/device-origen.mk)
+$(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
