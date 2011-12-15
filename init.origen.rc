@@ -97,6 +97,8 @@ on boot
     write /sys/class/android_usb/android0/functions adb
     write /sys/class/android_usb/android0/enable 1
 
+    insmod /system/modules/gator.ko
+
 # Initialize the SGX driver
 service pvrsrvinit /system/bin/pvrsrvinit
     user root
