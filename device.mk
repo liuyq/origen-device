@@ -13,8 +13,9 @@
 # limitations under the License.
 
 PRODUCT_COPY_FILES := \
-	device/linaro/origen/vold.fstab:system/etc/vold.fstab \
-	device/linaro/origen/egl.cfg:system/lib/egl/egl.cfg
+        device/linaro/origen/vold.fstab:system/etc/vold.fstab \
+        device/linaro/origen/egl.cfg:system/lib/egl/egl.cfg \
+        device/linaro/origen/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
         device/linaro/origen/init.rc:root/init.rc \
