@@ -15,7 +15,7 @@
 PRODUCT_COPY_FILES := \
         device/linaro/origen/vold.fstab:system/etc/vold.fstab \
         device/linaro/origen/egl.cfg:system/lib/egl/egl.cfg \
-        device/linaro/origen/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+        device/linaro/common/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
         device/linaro/origen/init.rc:root/init.rc \
@@ -25,6 +25,10 @@ PRODUCT_COPY_FILES += \
         device/linaro/origen/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
         device/linaro/origen/unidisplay_ts.idc:system/usr/idc/unidisplay_ts.idc \
         device/linaro/common/wallpaper_info.xml:data/system/wallpaper_info.xml
+
+PRODUCT_COPY_FILES += \
+        frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+        device/linaro/common/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml
 
 PRODUCT_PROPERTY_OVERRIDES := \
         hwui.render_dirty_regions=false
