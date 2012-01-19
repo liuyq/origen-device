@@ -63,6 +63,10 @@ on boot
     chown system system /sys/class/graphics/fb0/fit_to_screen
     chown system system /sys/class/graphics/fb1/overlays
 
+    # owners and permissions for Bluetooth
+    chmod 0660 sys/class/rfkill/rfkill0/state
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
+
     # Enable Android usb gadget functionality
     ## adb for the time being
     write /sys/class/android_usb/android0/enable 0
