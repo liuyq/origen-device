@@ -53,3 +53,5 @@ TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9,$(call cc-option,-mtune
 
 # ARMs gator (DS-5)
 TARGET_USE_GATOR := true
+
+BOARD_HAVE_CODEC_SUPPORT := SAMSUNG_CODEC_SUPPORT
