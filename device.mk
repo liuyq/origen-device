@@ -22,7 +22,7 @@ PRODUCT_COPY_FILES += \
         device/linaro/origen/init.origen.rc:root/init.origen.rc \
         device/linaro/origen/ueventd.origen.rc:root/ueventd.origen.rc \
         device/linaro/origen/initlogo.rle:root/initlogo.rle \
-        device/linaro/origen/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+        device/linaro/common/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
         device/linaro/origen/unidisplay_ts.idc:system/usr/idc/unidisplay_ts.idc \
         device/linaro/common/wallpaper_info.xml:data/system/wallpaper_info.xml
 
