@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+LOCAL_PATH := device/linaro/origen
+
 PRODUCT_COPY_FILES := \
         device/linaro/origen/vold.fstab:system/etc/vold.fstab \
         device/linaro/origen/egl.cfg:system/lib/egl/egl.cfg \
@@ -49,6 +51,8 @@ PRODUCT_PACKAGES += \
 # Filesystem management tools
 PRODUCT_PACKAGES += \
         make_ext4fs
+
+DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 
 $(call inherit-product-if-exists, vendor/samsung/origen/device-origen.mk)
 $(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
