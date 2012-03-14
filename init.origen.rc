@@ -73,12 +73,6 @@ on boot
     chmod 0660 sys/class/rfkill/rfkill0/state
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
 
-    # Enable Android usb gadget functionality
-    ## adb for the time being
-    write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/functions adb
-    write /sys/class/android_usb/android0/enable 1
-
     insmod /system/modules/cfg80211.ko
 
 service faketsd /system/bin/faketsd
