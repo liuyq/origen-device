@@ -1,3 +1,5 @@
+import init.origen.usb.rc
+
 on init
     # mount debugfs
     mount debugfs /sys/kernel/debug /sys/kernel/debug

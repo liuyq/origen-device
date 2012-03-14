@@ -20,6 +20,7 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += \
         device/linaro/origen/init.rc:root/init.rc \
         device/linaro/origen/init.origen.rc:root/init.origen.rc \
+        device/linaro/origen/init.origen.usb.rc:root/init.origen.usb.rc \
         device/linaro/origen/ueventd.origen.rc:root/ueventd.origen.rc \
         device/linaro/origen/initlogo.rle:root/initlogo.rle \
         device/linaro/common/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
@@ -29,6 +30,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
         frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
         device/linaro/common/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml
+
+# Set default USB interface
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+        persist.sys.usb.config=mass_storage,adb
 
 PRODUCT_PROPERTY_OVERRIDES := \
         hwui.render_dirty_regions=false
