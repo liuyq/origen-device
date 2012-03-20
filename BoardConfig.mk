@@ -13,7 +13,6 @@ TARGET_USE_XLOADER := false
 XLOADER_BINARY := out/target/product/origen/obj/u-boot/mmc_spl/u-boot-mmc-spl.bin
 TARGET_NO_RECOVERY := true
 TARGET_NO_RADIOIMAGE := true
-TARGET_PROVIDES_INIT_RC := true
 TARGET_CPU_SMP := true
 BOARD_USES_GENERIC_AUDIO := true
 BOARD_USES_ALSA_AUDIO := true
