@@ -20,7 +20,6 @@ PRODUCT_COPY_FILES := \
         device/linaro/common/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-        device/linaro/origen/init.rc:root/init.rc \
         device/linaro/origen/init.origen.rc:root/init.origen.rc \
         device/linaro/origen/init.origen.usb.rc:root/init.origen.usb.rc \
         device/linaro/origen/ueventd.origen.rc:root/ueventd.origen.rc \
