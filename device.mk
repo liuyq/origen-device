@@ -15,6 +15,7 @@
 LOCAL_PATH := device/linaro/origen
 
 PRODUCT_COPY_FILES := \
+	device/linaro/common/init.partitions-with-kernelpartition.rc:root/init.partitions.rc \
         device/linaro/origen/vold.fstab:system/etc/vold.fstab \
         device/linaro/origen/egl.cfg:system/lib/egl/egl.cfg \
         device/linaro/common/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
