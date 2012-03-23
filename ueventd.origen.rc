@@ -2,3 +2,11 @@
    /dev/mali             0666    system    system
    /dev/ump              0666    system    graphics
    /dev/s3c-mfc          0666    system    system
+   /dev/video14          0666    system    system
+   /dev/video21          0666    system    system
+   /dev/i2c-6            0666    system    system
+   /dev/CEC              0666    system    system
+   /dev/HPD              0666    system    system
+   /dev/s5p-rp           0666    system    audio
+   /dev/s5p-rp_ctrl      0666    system    audio
+   /dev/graphics/*       0666    root      graphics
