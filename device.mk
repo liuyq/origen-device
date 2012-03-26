@@ -35,7 +35,7 @@ PRODUCT_COPY_FILES += \
 
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-        persist.sys.usb.config=mass_storage,adb
+        persist.sys.usb.config=mtp
 
 PRODUCT_PROPERTY_OVERRIDES := \
         hwui.render_dirty_regions=false
