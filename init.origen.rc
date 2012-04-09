@@ -17,6 +17,7 @@ on boot
     setprop hw.nobattery true
     setprop ro.build.product exynos4
     setprop ro.product.device exynos4
+    setprop ro.nohardwaregfx true
     setprop wifi.interface wlan0
     setprop dev.hdmi 0
     setprop dev.videoPlayback 0
