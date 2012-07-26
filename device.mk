@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES += \
         device/linaro/common/wallpaper_info.xml:data/system/wallpaper_info.xml
 
 PRODUCT_COPY_FILES += \
-        frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+        frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
         device/linaro/common/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml
 
 # Set default USB interface
@@ -58,4 +58,4 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 
 $(call inherit-product-if-exists, vendor/samsung/origen/device-origen.mk)
-$(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
