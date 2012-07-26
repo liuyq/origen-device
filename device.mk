@@ -43,6 +43,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
         ro.nohardwaregfx=true
 
+# Set screen DPI to 120 to boot into tablet GUI
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.sf.lcd_density = 120
+
 PRODUCT_PROPERTY_OVERRIDES := \
         hwui.render_dirty_regions=false
 
