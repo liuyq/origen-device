@@ -55,3 +55,6 @@ TARGET_USE_GATOR := true
 
 BOARD_HAVE_CODEC_SUPPORT := SAMSUNG_CODEC_SUPPORT
 BOARD_HAVE_HDMI_SUPPORT := SAMSUNG_HDMI_SUPPORT
+
+# Build uImage and uInitrd instead of kernel and ramdisk.img
+TARGET_BOOTLOADER_TYPE := uboot
