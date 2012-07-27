@@ -38,11 +38,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
         persist.sys.usb.config=mtp
 
-# Enable software graphics hack until we get MALI support
-# for JB.
-PRODUCT_PROPERTY_OVERRIDES += \
-        ro.nohardwaregfx=true
-
 # Set screen DPI to 120 to boot into tablet GUI
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density = 120
