@@ -25,6 +25,7 @@ PRODUCT_COPY_FILES += \
         device/linaro/origen/init.origen.usb.rc:root/init.origen.usb.rc \
         device/linaro/origen/ueventd.origen.rc:root/ueventd.origen.rc \
         device/linaro/origen/initlogo.rle:root/initlogo.rle \
+        device/linaro/common/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
         device/linaro/origen/unidisplay_ts.idc:system/usr/idc/unidisplay_ts.idc \
         device/linaro/origen/gpio-keys.kcm:system/usr/keychars/gpio-keys.kcm \
         device/linaro/origen/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
