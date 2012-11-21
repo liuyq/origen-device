@@ -3,6 +3,7 @@
 # Product-specific compile-time definitions.
 #
 
+TARGET_ARCH := arm
 TARGET_BOARD_PLATFORM := origen
 TARGET_NO_BOOTLOADER := true # Uses u-boot instead 
 TARGET_NO_KERNEL := false
