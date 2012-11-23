@@ -45,7 +45,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density = 120
 
 PRODUCT_PROPERTY_OVERRIDES += \
-        hwui.render_dirty_regions=false
+        hwui.render_dirty_regions=false \
+        debug.sf.no_hw_vsync=1
 
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
 
