@@ -7,6 +7,7 @@ TARGET_ARCH := arm
 TARGET_BOARD_PLATFORM := origen
 TARGET_NO_BOOTLOADER := true # Uses u-boot instead 
 TARGET_NO_KERNEL := false
+TARGET_HWPACK_CONFIG := device/linaro/origen/config
 KERNEL_CONFIG := android_origen_defconfig
 TARGET_USE_UBOOT := true
 UBOOT_CONFIG := origen_config
